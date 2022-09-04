@@ -18,10 +18,10 @@ var sortedSquares = function(nums) {
     
     while(idx >= 1) {
         if(Math.abs(nums[en-1]) > Math.abs(nums[st-1])) {
-            arr[idx-1] = nums[en-1]**2
+            arr[idx-1] = nums[en-1]*nums[en-1]
             en--
         } else {
-            arr[idx-1] = nums[st-1]**2
+            arr[idx-1] = nums[st-1]*nums[st-1]
             st++
         }
         idx--
