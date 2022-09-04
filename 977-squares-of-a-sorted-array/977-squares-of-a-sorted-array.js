@@ -17,7 +17,7 @@ var sortedSquares = function(nums) {
     let arr = new Array(len)
     
     while(idx >= 1) {
-        if(nums[en-1]**2 > nums[st-1]**2) {
+        if(Math.abs(nums[en-1]) > Math.abs(nums[st-1])) {
             arr[idx-1] = nums[en-1]**2
             en--
         } else {
