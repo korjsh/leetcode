@@ -13,18 +13,16 @@ var sortedSquares = function(nums) {
     const len = nums.length
     let st = 1
     let en = len
-    let idx = len
-    let arr = new Array(len)
+    let arr = []
     
-    while(idx >= 1) {
+    while(en-st >= 0) {
         if(Math.abs(nums[en-1]) > Math.abs(nums[st-1])) {
-            arr[idx-1] = nums[en-1]**2
+            arr.push(nums[en-1]**2)
             en--
         } else {
-            arr[idx-1] = nums[st-1]**2
+            arr.push(nums[st-1]**2)
             st++
         }
-        idx--
     }
-    return arr
+    return arr.reverse()
 };
